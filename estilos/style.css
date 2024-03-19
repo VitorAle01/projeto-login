@@ -34,12 +34,18 @@ section#login{
     left: 50%;
     transform: translate(-50%, -50%); /*Metade para cima e metade para esquerda*/
     background-color: white;
+
     height: 550px;
     width: 250px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 10px brgba(0, 0, 0, 0.399)
+
+    transition: width .3s, height .3s; /*alteração de um login para o outro*/
+    transition-timing-function: ease; /*suavidade no login*/
 }
+
+
 
 section#login > div#imagem{
     display: block;
