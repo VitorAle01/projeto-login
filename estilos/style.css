@@ -33,15 +33,14 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /*Metade para cima e metade para esquerda*/
     background-color: white;
+    transform: translate(-50%, -50%); /*Metade para cima e metade para esquerda e sempre deixar o transform no final da tag*/
 
     height: 510px;
     width: 250px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0px 0px 10px brgba(0, 0, 0, 0.399)
-
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
     transition: width .3s, height .3s; /*alteração de um login para o outro*/
     transition-timing-function: ease; /*suavidade no login*/
 }
@@ -73,10 +72,11 @@ div#formulario > p{
 form > div.campo{
     display: block;
     background-color: #5f2c82;
-    width: 90%;
+    width: 82%;
     height: 40px;
     margin: 5px 0px;
-    border-radius: 5px;
+    border: 2px solid #5f2c82;
+    border-radius: 8px;
     margin-left: 5%;
     
 }
@@ -85,10 +85,31 @@ div.campo label{
     display: none;
 }
 
+div.campo > span{
+    color: white;
+    /*background-color: black;*/
+    font-size: 2em;
+    height:40px;
+}
+
+div.campo > input{
+    background-color: #5ccbc8;
+    height: 100%;
+    font-size: 1em;
+    width:calc(95% - 27px);
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    transform: translateY(-7px);
+}
+div.campo >input:focus-within{ /*A caixa que o usuario for digitar, ela vai aparecer com o fundo branco que é a cor escolhida*/
+    background-color: white;
+}
+
 form > input[type=submit] {
     display: block;
     font-size: 1em;
-    width: 90%;
+    width: 82%;
     height: 40px;
     background-color: #49a09d;
     color: white;
@@ -108,7 +129,7 @@ form > a.botao{
     text-align: center;
     font-size: 1em;
     margin-top: 5px;
-    width: 90%;
+    width: 82%;
     height: 40px;
     padding-top: 5px;
     border-radius: 5px;
